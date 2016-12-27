@@ -1,0 +1,855 @@
+body{
+  margin:0 auto;
+  padding:0;
+  font-size:100%;
+  font:1.15em/1.3 'Source Sans Pro', sans-serif;
+  font-weight:300;
+}
+
+h1{
+  text-align:center;
+}
+
+h2{
+  text-align:center;
+}
+
+strong{
+  font-weight:400;
+}
+
+.nav-wrapper{
+  height:60px;
+}
+
+.nav{
+  left:0;
+  bottom:0;
+  right:0;
+  height:60px;
+  text-align:center;
+  position:absolute;
+  margin:0 auto;
+  background:#F8D568;
+  z-index:999;
+}
+
+.nav.scrolled{
+  top:0;
+  position:fixed;
+  box-shadow:0px 1px 14px 0px rgba(0,0,0,0.1);
+}
+
+.nav ul{
+  margin:0 auto;
+  padding:0;
+  list-style:none;
+  display:inline-block;
+}
+
+.nav ul li{
+  padding:0 8px;
+  line-height:60px;
+  display:inline-block;
+  float:left;
+  text-transform:uppercase;
+}
+
+.nav ul li a{
+  display:block;
+  font-size:0.938em;
+  letter-spacing: .1em;
+  color:#f88d68;
+  text-decoration:none;
+}
+
+.nav ul li a:hover{
+  color: #fff;
+}
+
+/*Main Page Styling*/
+section#page-header{
+  height:100vh; /*vh = viewport height*/
+  width:100%;
+  display:table; /*Sets parent container to behave like a table*/
+  background:#F8D568;
+  color:#fff;
+}
+
+section#page-header header{
+  text-align:center;
+  display:table-cell; /*Sets child to display like tabel cell for vertical centering*/
+  vertical-align:middle; /*Vertically centers text in a table-cell regardless of it's parent resizing*/
+}
+
+section#page-header header h1{
+  font-size:4em;
+  font-weight:300;
+  line-height:1em;
+}
+
+section#page-header header h2{
+  font-size:2em;
+  text-transform:uppercase;
+  font-weight:300;
+  line-height:0.75em;
+  margin-top:-10px;
+}
+
+section#page-header header h3{
+  font-size:1.45em;
+  text-transform:uppercase;
+  font-weight:300;
+  line-height:0.75em;
+  margin-top:-10px;
+}
+
+/*Border Under h1*/
+section#page-header header div.row-horizontal{
+  margin-left:auto;
+  margin-right:auto;
+  padding:0 !important;
+}
+
+section#page-header header div.row-horizontal:before, .row-horizontal:after{
+  content:"";
+  display:table;
+}
+
+section#page-header header div.row-horizontal div.col-line{
+  width:450px;
+  padding:.095em;
+  margin-top:-60px;
+  margin-bottom:0px;
+}
+
+section#page-header header div.row-horizontal div.centered{
+  margin-left:auto;
+  margin-right:auto;
+  float:none;
+}
+
+section#page-header header div.row-horizontal div.h1-underline{
+  background-color:#f88d68;
+}
+
+/*Sub-Sections*/
+/*Section.Page-Content*/
+section.page-content{
+  height:100vh;
+  width:100%;
+  display:table; /*Sets parent container to behave like a table*/
+}
+
+section.page-content div.container article div.text-center{
+  text-align:center;
+}
+
+/*Skills Section*/
+section#skills{
+  background:#ffffff;
+  color:#000000;
+  display:flex;
+  align-items:center;
+  vertical-align:middle;
+}
+
+section#skills.page-content div.container{
+  width:100%;
+}
+
+section#skills.page-content div.container header h1{
+  font-size:3em;
+  font-weight:300;
+  text-transform:uppercase;
+  line-height:1em;
+  letter-spacing: .075em;
+  margin:0;
+}
+
+/*Border Under h1*/
+section#skills.page-content div.container header  div.h1-underline{
+  background-color:#f88d68;
+  margin:0 auto 30px auto;
+  width:420px;
+  padding:.095em;
+  opacity:.5 !important;
+}
+
+section#skills.page-content div.container article div.row-skills{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0!important;
+}
+
+section#skills.page-content div.container article div.row-skills:before{
+  content:'';
+  display:table;
+}
+
+section#skills.page-content div.container article div.row-skills:after{
+  content:'';
+  display:table;
+}
+
+section#skills.page-content div.container article div.col-skills{
+  width:16.666666666666664%;
+  float:left;
+}
+
+section#skills.page-content div.container article div.skill-container{
+  text-align:center;
+  vertical-align:bottom;
+}
+
+section#skills.page-content div.container article div.skill-level-color-1{
+  background:#f88d68;
+}
+
+section#skills.page-content div.container article div.skill-level-color-2{
+  background:#eee;
+}
+
+section#skills.page-content div.container article div div.skill-level-1-hover-content{
+  display:none;
+}
+
+section#skills.page-content div.container article div div.skill-level-2-hover-content{
+  display:none;
+}
+
+section#skills.page-content div.container article div div.skill-level-3-hover-content{
+  display:none;
+}
+
+section#skills.page-content div.container article div div.skill-level-hover-content{
+  display:none;
+}
+
+section#skills.page-content div.container article div.skill-container:hover div.skill-level-hover-content{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0;
+  margin:0;
+}
+
+section#skills.page-content div.container article div.skill-level-1{
+  width:1em;
+  height:1em;
+  display:inline-block;
+}
+
+section#skills.page-content div.container article div.skill-level-2{
+  width:1em;
+  height:2em;
+  display:inline-block;
+}
+
+section#skills.page-content div.container article div.skill-level-2:hover div.skill-level-2-hover-content{
+  display: flex;
+  margin-top: -130%;
+  margin-left: -30px;
+}
+
+section#skills.page-content div.container article div.skill-level-3{
+  width:1em;
+  height:3em;
+  display:inline-block;
+}
+
+section#skills.page-content div.container article div.skill-level-3:hover div.skill-level-3-hover-content{
+  display: flex;
+  margin-top: -130%;
+  margin-left: -30px;
+}
+
+/*Experience Section*/
+section#experience{
+  background:#eeeeee;
+  color:#828282;
+  /*vertical-align: middle;
+  align-items: center;
+  display: flex;*/
+}
+
+section#experience.page-content div.container{
+  height:100%;
+  margin:0 auto;
+  padding:75px 0;
+  /*margin:0 auto;
+  position:relative;*/
+}
+
+section#experience.page-content div.container header h1{
+  font-size:3em;
+  font-weight:300;
+  text-transform:uppercase;
+  line-height:1em;
+  letter-spacing: .075em;
+  margin:0;
+  padding:30px 0px 0px 0px;
+}
+
+/*Border Under h1*/
+section#experience.page-content div.container header div.h1-underline{
+  background-color:#428bca;
+  margin:0 auto 30px auto;
+  width:260px;
+  padding:.095em;
+  opacity:.5 !important;
+}
+
+section#experience.page-content div.container article h1{
+  font-size:1.75em;
+  font-weight:400;
+  text-transform:uppercase;
+  line-height:1em;
+  margin:0;
+  padding:0px 0px 10px 0px;
+}
+
+section#experience.page-content div.container article div.col-experience-container{
+  width:35%;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+section#experience.page-content div.container article div.col-experience-container div.col-experience{
+  width:50%;
+  float:left;
+}
+
+section#experience.page-content div.container article div.text-center-experience{
+  text-align:center;
+}
+
+section#experience.page-content div.container article div.job-separator{
+    width:50px;
+    padding:0.095em;
+    /*background:#c7c7c7;*/
+    background:#428bca;
+    opacity:.5 !important;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+section#experience.page-content div.container article span.blue{
+  font-weight:800;
+  color: #428bca;
+}
+
+section#experience.page-content div.container article div.col-bottom-spacing{
+  padding:0px 0px 20px 0px;
+}
+
+section#experience.page-content div.container article div.col-width{
+  width:85%;
+  margin:0 auto;
+  padding:0;
+  display:table;
+}
+
+/*Portfolio Section*/
+section#portfolio{
+  background:#ffffff;
+  color:#000000;
+}
+
+section#portfolio.page-content div.container{
+  height:100%;
+  margin:0 auto;
+  padding:75px 0;
+}
+
+section#portfolio.page-content div.container header h1{
+  font-size:3em;
+  font-weight:300;
+  text-transform:uppercase;
+  line-height:1em;
+  letter-spacing: .075em;
+  margin:0;
+}
+
+/*Border Under h1*/
+section#portfolio.page-content div.container header div.h1-underline{
+  background-color:#f88d68;
+  margin:0 auto 30px auto;
+  width:225px;
+  padding:.095em;
+  opacity:.5 !important;
+}
+
+.flex-container{
+  padding:1px;
+  margin:20px;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content:space-around;
+  align-items:center;
+}
+
+section#portfolio.page-content div.container article div h1{
+  font-weight:500;
+  font-size:1em;
+  margin:5px;
+  padding:0;
+}
+
+div.content{
+  font-size:.75em;
+  font-weight:300;
+  margin:5px;
+  padding:0;
+}
+
+.container-project-types{
+  width:100%;
+  float: left;
+  padding: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.types{
+  display: block;
+  margin:0 0 15px 0;
+  padding:0;
+  list-style-type:none;
+  text-align:center;
+}
+
+.types li:hover{
+    color: #fbc4b1;
+    cursor:pointer;
+}
+
+.types li{
+  color: #000000;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.types li:first-child:before{
+    content: "";
+    padding: 0;
+}
+
+.types li:before{
+  content:"\2022";
+  padding:0 10px;
+  color:#fbc4b1;
+}
+
+li.coral{
+  color:#fbc4b1;
+}
+
+.inner-container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width:75%;
+}
+
+.inner-container:before{
+  display: table;
+  content: " ";
+}
+
+.spacing{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row{
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom:48px;
+  padding-top:12px;
+  width:100%
+}
+
+.row:before{
+  display:table;
+  content:" ";
+}
+
+.inner-row-left{
+  width:25%;
+  float:left;
+  margin-right:10px;
+}
+
+.inner-row-right{
+  width:50%;
+  float:left;
+  margin:0;
+}
+
+.inner-row-right:before{
+  content: '';
+  background-color:#828282;
+  opacity:.7 !important;
+  height:94%;
+  width:1.5px;
+  position:absolute;
+  left:-10px;
+  top:20px;
+}
+
+.inner-row-right:before{
+  content: '';
+  background-color:#828282;
+  opacity:.7 !important;
+  height:calc(100% - 20px);
+  width:1.5px;
+  position:absolute;
+  left:-10px;
+  top:20px;
+}
+
+.inner-row-right-last{
+  margin:0 0 75px 0;
+}
+
+.inner-row-right-last:before{
+  height:calc(100% - 35px);
+}
+
+section#portfolio.page-content article h3{
+  font-size:1em;
+  font-weight:300;
+}
+
+p{
+  font-size:1em;
+  font-weight:300;
+  margin:0px 0px 17px 0px;
+}
+
+.inner-row-right p:before{
+  content:"\E065";
+  position:absolute;
+  left:-18px;
+  color:#828282;
+  opacity:.7 !important;
+  font-family:"Material Icons";
+}
+
+/*Education Section*/
+section#education{
+  background:#eeeeee;
+  color:#828282;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+
+section#education.page-content div.container{
+  margin:0 auto;
+  position:relative;
+}
+
+section#education.page-content div.container header h1{
+  font-size:3em;
+  font-weight:300;
+  text-transform:uppercase;
+  line-height:1em;
+  letter-spacing: .075em;
+  margin:0;
+}
+
+/*Border Under h1*/
+section#education.page-content div.container header div.h1-underline{
+  background-color:#428bca;
+  margin:0 auto 30px auto;
+  width:240px;
+  padding:.095em;
+  opacity:.5 !important;
+}
+
+section#education.page-content article .inner-container{
+  width:75%;
+}
+
+section#education.page-content article h1{
+  font-size:1.5em;
+  font-weight:400;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin:0 auto;
+  padding:0;
+}
+
+section#education.page-content article h2{
+  font-size:1.025em;
+  font-weight:300;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin:0 auto;
+  padding:0;
+}
+
+section#education.page-content article h3{
+  font-size:1em;
+  font-weight:300;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+}
+
+.printable-resume{
+  position:static;
+  /*right:0;
+  bottom:0;
+  left:0;*/
+  margin-top:6em;
+  /*background-color:#F8D568;*/
+  text-align:center;
+}
+
+.printable-resume a{
+  color:#f88d68;
+  border-bottom-style:dashed;
+  text-decoration:none;
+  font-weight:400;
+}
+
+.printable-resume a:hover{
+  font-size:1.25em;
+}
+
+/*Contact Me Section*/
+section#contact{
+  background:#ffffff;
+  color:#828282;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+}
+
+section#contact.page-content div.container{
+  margin:0 auto;
+  position:relative;
+}
+
+section#contact.page-content div.container header h1{
+  font-size:3em;
+  font-weight:300;
+  text-transform:uppercase;
+  line-height:1em;
+  letter-spacing: .075em;
+  margin:0;
+}
+
+/*Border Under h1*/
+section#contact.page-content div.container header div.h1-underline{
+  background-color:#f88d68;
+  margin:0 auto 30px auto;
+  width:300px;
+  padding:.095em;
+  opacity:.5 !important;
+}
+
+section#contact.page-content *,
+section#contact.page-content *:before,
+section#contact.page-content *:after {
+  box-sizing: border-box;
+}
+
+form {
+   max-width: 600px;
+   text-align: center;
+   margin: 20px auto;
+}
+
+input, textarea {
+  background:#eeeeee;
+  color:#828282;
+  border:0;
+  outline:0;
+  padding:1em;
+  border-radius:8px;
+  display:block;
+  width:100%;
+  margin-top:1em;
+  box-shadow:0 1px 1px grey;
+  resize:none;
+}
+
+input:focus, textarea:focus{
+  box-shadow:0 0 2px grey !important;
+}
+
+#input-submit{
+  color:#ffffff;
+  background:#f88d68;
+  cursor:pointer;
+}
+
+#input-submit:focus{
+  box-shadow:1px 1px 1px rgba(#aaa, 0.6);
+}
+
+textarea{
+  height:145px;
+}
+
+.half{
+  float:left;
+  width:48%;
+  margin-bottom:1em;
+}
+
+.right{
+  width:50%;
+}
+
+.left {
+  margin-right:2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width:100%;
+    float:none;
+    margin-bottom:0;
+  }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content:" "; /* 1 */
+  display:table; /* 2 */
+}
+
+.cf:after {
+  clear:both;
+}
+
+@media print, screen and (max-width:1021px) {
+  section#experience.page-content div.container article div.job-separator {
+    margin-top:20px;
+  }
+}
+
+@media print, screen and (max-width:768px) {
+  .nav li a span{
+    display:none;
+  }
+}
+
+@media print, screen and (max-width:519px) {
+  section#page-header header div.row-horizontal div.col-line{
+    width:215px;
+  }
+}
+
+@media print, screen and (max-width:/*421*/500px) {
+  section#skills.page-content div.container header h1{
+    padding:45px 0px 0px 0px;
+    font-size:2em;
+  }
+
+  section#skills.page-content div.container header div.h1-underline{
+    width:280px;
+  }
+
+  section#skills.page-content div.container article div.col-skills{
+    width:50%;
+    padding-bottom:30px;
+  }
+
+  section#experience.page-content div.container header h1{
+    font-size:2em;
+    padding:0;
+  }
+
+  section#experience.page-content div.container header div.h1-underline{
+    width:170px;
+  }
+
+  section#experience.page-content div.container article h1{
+    font-size:1.25em;
+  }
+
+  section#portfolio.page-content div.container header h1{
+    /*padding:65px 0px 0px 0px;*/
+    font-size:2em;
+  }
+
+  section#portfolio.page-content div.container header div.h1-underline{
+    width:160px;
+  }
+
+  section#education.page-content div.container header h1{
+    font-size:2em;
+  }
+
+  section#education.page-content div.container header div.h1-underline{
+    width:160px;
+  }
+
+  section#contact.page-content div.container header h1{
+    font-size:2em;
+    margin-top:50px;
+  }
+
+  /*Border Under h1*/
+  section#contact.page-content div.container header div.h1-underline{
+    width:200px;
+  }
+
+  .inner-row-left{
+    width:35%;
+    left:-10px;
+  }
+
+  .inner-row-right{
+    width:35%;
+  }
+}
+
+@media print, screen and (max-width:433px) {
+  section#experience.page-content div.container article div.col-experience-container{
+    width:100%;
+  }
+
+  section#experience.page-content div.container article div.col-experience-container div.col-experience {
+    width: 100%;
+  }
+
+  section#experience.page-content div.container article div.job-separator {
+    margin-top: 20px;
+  }
+
+  section#experience.page-content div.container article div.col-width {
+    width: 100%;
+  }
+
+  section#experience.page-content div.container article div.col-bottom-spacing {
+    padding: 0px 0px 10px 0px;
+  }
+}
+
+@media print, screen and (max-width:328px){
+  section#skills.page-content div.container header div.h1-underline{
+    width:170px;
+  }
+}

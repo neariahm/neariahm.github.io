@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <!--<link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="stylesheet" href="stylesheets/github-light.css">--->
-        <meta name="viewport" content="width=device-width">
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="/blog">Home</a></li>
-                        <li><a href="/blog/blog.html">Blog</a></li>
-                    </ul>
-                </nav>
-                <h1><a href="/"><strong>K</strong>Claiborne</a></h1>
+
+{% include head.html %}
+
+<body>
+<div class="page-container">
+<div class="nav-wrapper">
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/blog.html">Writings</a>
+        <a href="/resume.html">Portfolio</a>
+    </div>
+</div>
+<div class="top">
+    <main>
+        <div class="container">
+            <div class="main">
+                {{ content }}
             </div>
-        </header>
-        <div class="content">
-            {{ content }}
         </div>
-        <footer>
-            <p>This project is maintained by <a href="https://github.com/kclaiborne">kclaiborne</a></p>
-            <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-        </footer>
-        <script src="/javascript/scale.fix.js"></script>
-    </body>
+    </main>
+</div>
+
+{% include footer.html %}
+</div>
+<script type="text/javascript">
+<!--Movable Navigation Bar-->
+    $(document).ready(function(){
+        $(window).bind('scroll', function(){
+            /*var distance = $(window).height();*/
+            var distance = 5;
+            if($(window).scrollTop() >= (distance)){
+                $('.nav').addClass('scrolled');
+            } else{
+                $('.nav').removeClass('scrolled');
+            }
+        });
+    });
+</script>
+
+</body>
 </html>

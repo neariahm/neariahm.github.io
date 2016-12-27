@@ -1,9 +1,38 @@
 ---
 layout: default
-title: Home
+title: KClaiborne
 ---
-<section class="hero">
-  <div class="small-container">
-    <h2><strong>K</strong>Claiborne</h2>
-  </div>
-</section>
+<div class="posts">
+    {% for post in paginator.posts %}
+        <article>
+            <header>
+                <h1>
+                    <a href="{{ post.url }}"  class="no-hover">{{ post.title }}</a>
+                </h1>
+
+                <span class="h2">{{ post.date | date: "%B %-d, %Y" }}</span>
+            </header>
+
+            <div class="post">
+                {{ post.excerpt }}
+            </div>
+        </article>
+    {% endfor %}
+
+    <div class="arrows">
+        {% if paginator.next_page %}
+            <!--<a href="/page{{ paginator.next_page }}"><img src="/images/previous-posts.png"/></a>-->
+            <a href="/page{{ paginator.next_page }}"><i class="material-icons">skip_previous</i></a>
+        {% endif %}
+
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+                <!--<a href="/"><img src="/images/next-posts.png"/></a>-->
+                <a href="/"><i class="material-icons">skip_next</i></a>
+            {% else %}
+                <!--<a href="/page{{ paginator.previous_page }}"><img src="/images/next-posts.png"/></a>-->
+                <a href="/page{{ paginator.previous_page }}"><i class="material-icons">skip_next</i></a>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
