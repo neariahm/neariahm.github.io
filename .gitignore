@@ -1,4 +1,4 @@
 _drafts/
-.idea/compiler.xml
 _site/
-.idea/workspace.xml
+.idea/
+jekyll-blog.iml
