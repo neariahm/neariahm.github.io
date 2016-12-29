@@ -71,4 +71,4 @@ kramdown:
 
 include: ['_pages']
 
-repository: "kclaiborne/kclaiborne.github.io"
+repository: "kclaiborne/blog"
