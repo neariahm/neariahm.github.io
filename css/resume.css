@@ -30,7 +30,7 @@ strong{
   text-align:center;
   position:absolute;
   margin:0 auto;
-  background:#F8D568;
+  background:rgb(252, 122, 112);
   z-index:999;
 }
 
@@ -59,12 +59,12 @@ strong{
   display:block;
   font-size:0.938em;
   letter-spacing: .1em;
-  color:#f88d68;
+  color:rgb(255, 255, 255);
   text-decoration:none;
 }
 
 .nav ul li a:hover{
-  color: #fff;
+  color:rgb(255, 194, 180);
 }
 
 /*Main Page Styling*/
@@ -72,8 +72,8 @@ section#page-header{
   height:100vh; /*vh = viewport height*/
   width:100%;
   display:table; /*Sets parent container to behave like a table*/
-  background:#F8D568;
-  color:#fff;
+  background:rgb(252, 122, 112);
+  color:rgb(255, 255, 255);
 }
 
 section#page-header header{
@@ -117,9 +117,9 @@ section#page-header header div.row-horizontal:before, .row-horizontal:after{
 }
 
 section#page-header header div.row-horizontal div.col-line{
-  width:450px;
-  padding:.095em;
-  margin-top:-60px;
+  width:350px;
+  padding:.05em;
+  margin-top:-40px;
   margin-bottom:0px;
 }
 
@@ -130,7 +130,7 @@ section#page-header header div.row-horizontal div.centered{
 }
 
 section#page-header header div.row-horizontal div.h1-underline{
-  background-color:#f88d68;
+  background-color:rgb(255, 194, 180);
 }
 
 /*Sub-Sections*/
@@ -168,11 +168,11 @@ section#skills.page-content div.container header h1{
 }
 
 /*Border Under h1*/
-section#skills.page-content div.container header  div.h1-underline{
+section#skills.page-content div.container header div.h1-underline{
   background-color:#f88d68;
   margin:0 auto 30px auto;
   width:420px;
-  padding:.095em;
+  padding:.05em;
   opacity:.5 !important;
 }
 
@@ -273,12 +273,14 @@ section#experience{
   display: flex;*/
 }
 
+section#experience.page-content{
+  height:100vh;
+  align-items: center;
+  display: flex;
+}
+
 section#experience.page-content div.container{
-  height:100%;
   margin:0 auto;
-  padding:75px 0;
-  /*margin:0 auto;
-  position:relative;*/
 }
 
 section#experience.page-content div.container header h1{
@@ -288,7 +290,7 @@ section#experience.page-content div.container header h1{
   line-height:1em;
   letter-spacing: .075em;
   margin:0;
-  padding:30px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
 }
 
 /*Border Under h1*/
@@ -296,8 +298,15 @@ section#experience.page-content div.container header div.h1-underline{
   background-color:#428bca;
   margin:0 auto 30px auto;
   width:260px;
-  padding:.095em;
+  padding:.05em;
   opacity:.5 !important;
+}
+
+section#experience.page-content div.container article{
+  margin-left: 50px;
+  margin-right: 50px;
+  height:50vh;
+  overflow-y: overlay;
 }
 
 section#experience.page-content div.container article h1{
@@ -326,8 +335,7 @@ section#experience.page-content div.container article div.text-center-experience
 
 section#experience.page-content div.container article div.job-separator{
     width:50px;
-    padding:0.095em;
-    /*background:#c7c7c7;*/
+    padding:0.055em;
     background:#428bca;
     opacity:.5 !important;
     margin-left:auto;
@@ -358,10 +366,14 @@ section#portfolio{
   color:#000000;
 }
 
+section#portfolio.page-content{
+  height:100vh;
+  align-items:center;
+  display:flex;
+}
+
 section#portfolio.page-content div.container{
-  height:100%;
   margin:0 auto;
-  padding:75px 0;
 }
 
 section#portfolio.page-content div.container header h1{
@@ -378,8 +390,20 @@ section#portfolio.page-content div.container header div.h1-underline{
   background-color:#f88d68;
   margin:0 auto 30px auto;
   width:225px;
-  padding:.095em;
+  padding:.05em;
   opacity:.5 !important;
+}
+
+section#portfolio.page-content div.container article div h1{
+  font-weight:500;
+  font-size:1em;
+  margin:5px;
+  padding:0;
+}
+
+section#portfolio.page-content div.container article div.inner-container{
+  overflow-y:overlay;
+  height:50vh;
 }
 
 .flex-container{
@@ -396,13 +420,6 @@ section#portfolio.page-content div.container header div.h1-underline{
   -webkit-flex-flow: row wrap;
   justify-content:space-around;
   align-items:center;
-}
-
-section#portfolio.page-content div.container article div h1{
-  font-weight:500;
-  font-size:1em;
-  margin:5px;
-  padding:0;
 }
 
 div.content{
@@ -501,20 +518,20 @@ li.coral{
   margin:0;
 }
 
-.inner-row-right:before{
+/* .inner-row-right:before{
   content: '';
-  background-color:#828282;
+  background-color:#428bca;
   opacity:.7 !important;
   height:94%;
   width:1.5px;
   position:absolute;
   left:-10px;
   top:20px;
-}
+} */
 
 .inner-row-right:before{
   content: '';
-  background-color:#828282;
+  background-color:#428bca;
   opacity:.7 !important;
   height:calc(100% - 20px);
   width:1.5px;
@@ -546,7 +563,7 @@ p{
   content:"\E065";
   position:absolute;
   left:-18px;
-  color:#828282;
+  color:#428bca;
   opacity:.7 !important;
   font-family:"Material Icons";
 }
@@ -579,7 +596,7 @@ section#education.page-content div.container header div.h1-underline{
   background-color:#428bca;
   margin:0 auto 30px auto;
   width:240px;
-  padding:.095em;
+  padding:.05em;
   opacity:.5 !important;
 }
 
@@ -628,6 +645,7 @@ section#education.page-content article h3{
   border-bottom-style:dashed;
   text-decoration:none;
   font-weight:400;
+  text-transform:uppercase;
 }
 
 .printable-resume a:hover{
@@ -662,7 +680,7 @@ section#contact.page-content div.container header div.h1-underline{
   background-color:#f88d68;
   margin:0 auto 30px auto;
   width:300px;
-  padding:.095em;
+  padding:.05em;
   opacity:.5 !important;
 }
 
@@ -761,7 +779,7 @@ textarea{
   }
 }
 
-@media print, screen and (max-width:/*421*/500px) {
+@media print, screen and (max-width:500px) {
   section#skills.page-content div.container header h1{
     padding:45px 0px 0px 0px;
     font-size:2em;
